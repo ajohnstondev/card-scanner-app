@@ -1,0 +1,143 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+}
+
+body {
+  #root {
+    height: 100%;
+    width: 100%;
+
+    .snipped-image {
+      padding: 30px;
+      .preview {
+        display: block;
+        margin: 0px auto;
+        max-width: 500px;
+        max-height: 300px;
+      }
+    }
+  }
+}
+
+.app-body {
+  border: solid 1px #606060;
+  background-color: #2d2d2d;
+  border-radius: 4px;
+  color: white;
+}
+.title-bar {
+  padding: 8px;
+  background-color: #424242;
+  border-bottom: solid 1px #181818;
+  border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+
+  display: flex;
+  justify-content: space-between;
+
+  -webkit-app-region: drag;
+
+  .title {
+    display: flex;
+    img {
+      height: 20px;
+      margin-right: 5px;
+    }
+    .move-anchor {
+      cursor: move;
+      -webkit-user-select: none;
+      -webkit-app-region: drag;
+    }
+  }
+  .status-btns {
+    display: flex;
+    .nodrag-btn {
+      -webkit-app-region: no-drag;
+    }
+    .drag-btn {
+      -webkit-app-region: drag;
+    }
+    .status-btn {
+      font-size: 12px;
+      padding: 2px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &.start-btn {
+        border: solid 1px #51af30;
+        background-color: rgba($color: #51af30, $alpha: 0.5);
+      }
+      &.stop-btn {
+        border: solid 1px #e24949;
+        // background-color: #e2494977;
+        background-color: rgba($color: #e24949, $alpha: 0.5);
+      }
+    }
+  }
+}
+
+.windows-btn {
+  -webkit-app-region: no-drag;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.sub-title-bar {
+  font-size: 12px;
+  color: #bcbcbc;
+
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+
+  .value {
+    font-weight: bold;
+    color: white;
+  }
+
+  .add-btn {
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+    opacity: 1;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.items {
+  padding-bottom: 12px;
+  .item {
+    padding: 12px 12px;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    &:nth-child(odd) {
+      background-color: #3c3c3c;
+    }
+  }
+}
+
+.cropper-controls {
+  position: absolute;
+  right: 0;
+  bottom: -1.5em;
+
+  display: flex;
+}

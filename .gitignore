@@ -1,0 +1,8 @@
+node_modules
+.vscode
+yarn.lock
+release
+.idea
+app/src/main/snips
+app/build
+app/release
